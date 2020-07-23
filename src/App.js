@@ -35,9 +35,14 @@ function App() {
       <div className="memes">
         {memes.map((m,i)=>{
           console.log(m)
-          return <img key={i} 
-            src={m.images.fixed_height.url}
-          />
+          return <div className="meme">
+              <img key={i} 
+              src={m.images.fixed_height.url}
+              />
+              <div className="meme-name">
+                  {m.title}
+              </div>
+          </div>
         })}
       </div>
     </div>
